@@ -1,0 +1,226 @@
+wandb_version: 1
+
+data_preprocessor.bgr_to_rgb:
+  value: 'true'
+data_preprocessor.seg_pad_val:
+  value: 464
+data_preprocessor.type:
+  value: SegDataPreProcessor
+data_root:
+  value: E:/subdivs_dust_v2/
+dataset_type:
+  value: MarsMapsDataset
+default_hooks.checkpoint.by_epoch:
+  value: 'false'
+default_hooks.checkpoint.interval:
+  value: 7607
+default_hooks.checkpoint.type:
+  value: CheckpointHook
+default_hooks.logger.interval:
+  value: 78
+default_hooks.logger.log_metric_by_epoch:
+  value: 'false'
+default_hooks.logger.type:
+  value: LoggerHook
+default_hooks.param_scheduler.type:
+  value: ParamSchedulerHook
+default_hooks.sampler_seed.type:
+  value: DistSamplerSeedHook
+default_hooks.timer.type:
+  value: IterTimerHook
+default_hooks.visualization.draw:
+  value: 'false'
+default_hooks.visualization.interval:
+  value: 191
+default_hooks.visualization.type:
+  value: SegVisualizationHook
+default_scope:
+  value: mmseg
+env_cfg.cudnn_benchmark:
+  value: 'true'
+env_cfg.dist_cfg.backend:
+  value: nccl
+env_cfg.mp_cfg.mp_start_method:
+  value: fork
+launcher:
+  value: none
+log_level:
+  value: INFO
+log_processor.by_epoch:
+  value: 'false'
+model.backbone.extra.stage1.block:
+  value: BOTTLENECK
+model.backbone.extra.stage1.num_branches:
+  value: 1
+model.backbone.extra.stage1.num_modules:
+  value: 2
+model.backbone.extra.stage2.block:
+  value: BASIC
+model.backbone.extra.stage2.num_branches:
+  value: 4
+model.backbone.extra.stage2.num_modules:
+  value: 2
+model.backbone.extra.stage3.block:
+  value: BASIC
+model.backbone.extra.stage3.num_branches:
+  value: 4
+model.backbone.extra.stage3.num_modules:
+  value: 2
+model.backbone.extra.stage4.block:
+  value: BASIC
+model.backbone.extra.stage4.num_branches:
+  value: 6
+model.backbone.extra.stage4.num_modules:
+  value: 2
+model.backbone.norm_cfg.requires_grad:
+  value: 'true'
+model.backbone.norm_cfg.type:
+  value: SyncBN
+model.backbone.norm_eval:
+  value: 'true'
+model.backbone.type:
+  value: HRNet
+model.data_preprocessor.bgr_to_rgb:
+  value: 'false'
+model.data_preprocessor.seg_pad_val:
+  value: 141
+model.data_preprocessor.type:
+  value: SegDataPreProcessor
+model.decode_head.align_corners:
+  value: 'true'
+model.decode_head.channels:
+  value: 370
+model.decode_head.concat_input:
+  value: 'true'
+model.decode_head.dropout_ratio:
+  value: 0
+model.decode_head.input_transform:
+  value: resize_concat
+model.decode_head.kernel_size:
+  value: 2
+model.decode_head.loss_decode.loss_weight:
+  value: 2
+model.decode_head.loss_decode.type:
+  value: CrossEntropyLoss
+model.decode_head.loss_decode.use_sigmoid:
+  value: 'false'
+model.decode_head.norm_cfg.requires_grad:
+  value: 'false'
+model.decode_head.norm_cfg.type:
+  value: SyncBN
+model.decode_head.num_classes:
+  value: 2
+model.decode_head.num_convs:
+  value: 1
+model.decode_head.out_channels:
+  value: 1
+model.decode_head.threshold:
+  value: 0.6738141077094276
+model.decode_head.type:
+  value: FCNHead
+model.test_cfg.mode:
+  value: whole
+model.type:
+  value: EncoderDecoder
+norm_cfg.requires_grad:
+  value: 'false'
+norm_cfg.type:
+  value: SyncBN
+optim_wrapper.optimizer.lr:
+  value: 0.01439285401552002
+optim_wrapper.optimizer.momentum:
+  value: 1.6539963476646344
+optim_wrapper.optimizer.type:
+  value: SGD
+optim_wrapper.optimizer.weight_decay:
+  value: 0.0009471905896841188
+optim_wrapper.type:
+  value: OptimWrapper
+optimizer.lr:
+  value: 0.013737922564615411
+optimizer.momentum:
+  value: 0.4934959592970884
+optimizer.type:
+  value: SGD
+optimizer.weight_decay:
+  value: 0.0007338140923504251
+resume:
+  value: 'true'
+test_cfg.type:
+  value: TestLoop
+test_dataloader.batch_size:
+  value: 2
+test_dataloader.dataset.data_prefix.img_path:
+  value: img_dir/test
+test_dataloader.dataset.data_prefix.seg_map_path:
+  value: ann_dir/test
+test_dataloader.dataset.data_root:
+  value: E:/subdivs_dust_v2/
+test_dataloader.dataset.type:
+  value: MarsMapsDataset
+test_dataloader.num_workers:
+  value: 3
+test_dataloader.persistent_workers:
+  value: 'false'
+test_dataloader.sampler.shuffle:
+  value: 'true'
+test_dataloader.sampler.type:
+  value: DefaultSampler
+test_evaluator.type:
+  value: IoUMetric
+train_cfg.max_iters:
+  value: 94225
+train_cfg.type:
+  value: IterBasedTrainLoop
+train_cfg.val_interval:
+  value: 6189
+train_dataloader.batch_size:
+  value: 16
+train_dataloader.dataset.data_prefix.img_path:
+  value: img_dir/train
+train_dataloader.dataset.data_prefix.seg_map_path:
+  value: ann_dir/train
+train_dataloader.dataset.data_root:
+  value: E:/subdivs_dust_v2/
+train_dataloader.dataset.type:
+  value: MarsMapsDataset
+train_dataloader.num_workers:
+  value: 10
+train_dataloader.persistent_workers:
+  value: 'true'
+train_dataloader.sampler.shuffle:
+  value: 'false'
+train_dataloader.sampler.type:
+  value: InfiniteSampler
+tta_model.type:
+  value: SegTTAModel
+val_cfg.type:
+  value: ValLoop
+val_dataloader.batch_size:
+  value: 2
+val_dataloader.dataset.data_prefix.img_path:
+  value: img_dir/val
+val_dataloader.dataset.data_prefix.seg_map_path:
+  value: ann_dir/val
+val_dataloader.dataset.data_root:
+  value: E:/subdivs_dust_v2/
+val_dataloader.dataset.type:
+  value: MarsMapsDataset
+val_dataloader.num_workers:
+  value: 2
+val_dataloader.persistent_workers:
+  value: 'true'
+val_dataloader.sampler.shuffle:
+  value: 'false'
+val_dataloader.sampler.type:
+  value: DefaultSampler
+val_evaluator.type:
+  value: IoUMetric
+visualizer.alpha:
+  value: 0.8630935164501337
+visualizer.name:
+  value: visualizer
+visualizer.type:
+  value: SegLocalVisualizer
+work_dir:
+  value: ./work_dirs\\hrnet_config
