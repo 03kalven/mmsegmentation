@@ -14,7 +14,7 @@ test_pipeline = [
     dict(type="PackSegInputs"),
 ]
 train_dataloader = dict(
-    batch_size=32,
+    batch_size=16,
     num_workers=4,
     persistent_workers=True,
     sampler=dict(type="InfiniteSampler", shuffle=True),
